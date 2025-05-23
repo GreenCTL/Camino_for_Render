@@ -4,6 +4,7 @@ import cors from "cors";
 import pkg from "pg";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
+import path from 'path';
 dotenv.config();
 
 const { Pool } = pkg;
