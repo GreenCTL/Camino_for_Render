@@ -387,11 +387,16 @@ app.get("/test", (req, res) => {
 // ---------------------------------------------
 // ✅ 設定靜態檔案（dist）目錄
 app.use(express.static(path.join(__dirname, 'dist')));// ✅ 所有未命中的路由都回傳 index.html，讓 React Router 處理
+// ---------------------------------------------
 app.get('*', (req, res) => {
+  if (req.path.startsWith('/api') || req.path.startsWith('/data')) {
+    return res.status(404).json({ error: 'API not found' }); // 或什麼都不回
+  }
+
+  // 這才是給 React 前端的 fallback
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});// ---------------------------------------------
-
-
+});
+// ---------------------------------------------
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
