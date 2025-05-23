@@ -73,7 +73,7 @@ function App() {
 
   // 載入路線
   useEffect(() => {
-    fetch("http://localhost:3001/api/routes")
+    fetch("https://test-camino.onrender.com/data?table=routes")
       .then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {

@@ -34,7 +34,7 @@ const Scenery = () => {
 
 
     const removeFavorite = async (sightId) => {
-      await fetch("http://localhost:3001/favorites", {
+      await fetch("https://test-camino.onrender.com/data?table=favorites", {
         method: "DELETE",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId, attractionId: sightId }),

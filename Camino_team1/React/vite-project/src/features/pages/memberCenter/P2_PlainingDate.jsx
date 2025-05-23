@@ -16,7 +16,7 @@ export default function PlainingDate() {
   const suggestDays = route?.days;
 
   useEffect(() => {
-    fetch("http://localhost:3002/route")
+    fetch("https://test-camino.onrender.com/data?table=routes")
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error("抓資料失敗", err));

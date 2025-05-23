@@ -8,7 +8,8 @@ export default function LikeButton({ data }) {
   const userId = localStorage.getItem("userId") || null;
   const routeId = data.route_id ?? null;
   const attractionId = data.sight_id ?? null;
-
+  // 宣告fetch網址改為render抓取
+  const BASE_URL = "https://camino-for-render-backend1.onrender.com";
 
   useEffect(() => {
     if (!userId || (!routeId && !attractionId)) return;
@@ -30,7 +31,7 @@ export default function LikeButton({ data }) {
     try {
       
       
-      const res = await fetch("http://localhost:3001/api/like/toggle", {
+      const res = await fetch(`${BASE_URL}/api/like/toggle`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ userId, routeId, attractionId }),

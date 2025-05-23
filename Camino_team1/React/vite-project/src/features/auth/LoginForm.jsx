@@ -34,7 +34,7 @@ const LoginForm = ({ isVisible, setIsLoggedIn }) => {
     if (!valid) return;
 
     try {
-      const res = await fetch("http://localhost:3001/login", {
+      const res = await fetch("https://camino-for-render-backend1.onrender.com/login", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

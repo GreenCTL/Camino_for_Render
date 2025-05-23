@@ -55,7 +55,7 @@ function RouteCheck({ Days }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("http://localhost:3002/route")
+    fetch("https://test-camino.onrender.com/data?table=routes")
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error("抓資料失敗", error));

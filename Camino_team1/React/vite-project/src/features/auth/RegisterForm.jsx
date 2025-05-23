@@ -35,7 +35,7 @@ const RegisterForm = ({ isVisible }) => {
     setRegisterError("");
 
     try {
-      const res = await fetch("http://localhost:3001/register", {
+      const res = await fetch("https://camino-for-render-backend1.onrender.com/register", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ email, password }),

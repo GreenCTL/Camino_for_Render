@@ -22,7 +22,7 @@ const SightCard = ({
       return;
     }
 
-    fetch("http://localhost:3001/favorites", {
+    fetch("https://test-camino.onrender.com/data?table=favorites", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, attractionId: sight_id }),
