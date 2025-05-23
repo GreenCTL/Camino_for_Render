@@ -1,0 +1,40 @@
+/* homeRoute.module.css */
+
+.pageContainer {
+  font-family: sans-serif;
+  padding: 10px;
+  padding-left: 20px;
+}
+
+.topImage {
+  width: 600px;
+  margin-top: 30px;
+}
+
+.routeButtonWrapper {
+  position: relative;
+}
+
+.routeButton {
+  position: absolute;
+  width: 150px;
+  height: 60px;
+  top: 0;
+  right: 170px;
+  margin: 10px;
+  padding: 8px 12px;
+  font-weight: bold;
+  background-color: #008a8e;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.routeButton:hover {
+  background-color: #076a6d;
+}
+
+.sectionSpacing {
+  margin-top: 30px;
+}

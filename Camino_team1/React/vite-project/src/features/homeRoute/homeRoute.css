@@ -1,0 +1,17 @@
+.buttonMore:hover {
+  background-color: #076a6d;
+  color: rgb(255, 255, 255);
+}
+
+.buttonMore {
+  width: 150px;
+  height: 60px;
+  margin-left: 250px;
+  margin-bottom: 60px;
+  font-weight: bold;
+  background-color: #008a8e;
+  color: rgb(255, 255, 255);
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: "16px";
+}
