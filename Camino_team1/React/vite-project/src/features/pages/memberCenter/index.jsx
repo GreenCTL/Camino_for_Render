@@ -4,8 +4,8 @@ import Account from "../../memberCenter/Account.jsx"; //元件
 import Orders from "../../memberCenter/Orders.jsx"; //元件
 import Favorites from "../../memberCenter/Favorites.jsx"; //元件
 import History from "../../memberCenter/History.jsx";
-import Records from "../../memberCenter/records.jsx";
-import Scenery from "../../memberCenter/scenery.jsx";
+import Records from "../../memberCenter/Records.jsx";
+import Scenery from "../../memberCenter/Scenery.jsx";
 //接收 userId的props
 const MemberCenter = ({ userId }) => {
   const [currentSection, setCurrentSection] = useState("account"); //預設元件是 account 這個是可以變的 透過底下的 顯示對應元件
