@@ -374,6 +374,11 @@ app.get("/api/like/list/:userId", async (req, res) => {
   }
 });
 
+// 測試用
+app.get("/test", (req, res) => {
+  res.send("✅ Camino backend1 is running");
+});
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
