@@ -105,9 +105,10 @@ router.get("/createpayment", (req, res) => {
   res.send("(測試)請透過 POST 方式提交付款資料");
 });
 
-//port
-app.listen(3002, () => {
-  console.log("✅ Server running at http://localhost:3002");
+//port(增加render提供的port)
+const PORT = process.env.PORT || 3002;
+app.listen(PORT, () => {
+  console.log(`✅ Server running on port ${PORT}`);
 });
 
 module.exports = app;
