@@ -18,6 +18,11 @@ const options = {
   IsProjectContractor: false,
 };
 
+//測試付款頁面
+router.get("/createpayment", (req, res) => {
+  res.send("🟢 測試用付款頁面");
+});
+
 //建立付款頁（由前端傳 totalAmount）
 router.post("/create-payment", (req, res) => {
   console.log("✅ 收到建立交易請求");
