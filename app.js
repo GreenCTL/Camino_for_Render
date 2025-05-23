@@ -100,9 +100,9 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
-// 測試用
-app.get("/test", (req, res) => {
-  res.send("✅ Camino backend2 is running");
+//測試creat-payment功能
+router.get("/create-payment", (req, res) => {
+  res.send("(測試)請透過 POST 方式提交付款資料");
 });
 
 //port
