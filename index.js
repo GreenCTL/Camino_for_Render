@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendVerificationEmail = async (email, token) => {
-  const link = `http://localhost:5173/verify?token=${token}`;
+  const link = `${process.env.FRONTEND_URL}/verify?token=${token}`;
   await transporter.sendMail({
     from: `"Camino App 驗證" <${process.env.GMAIL_USER}>`,
     to: email,
@@ -202,7 +202,7 @@ app.get("/sight", async (req, res) => {
 /// 改改改改改改
 // 收藏景點
 app.get("/favorites/sight/:userId", async (req, res) => {
-// app.get("/favorites/details/:userId", async (req, res) => {
+  // app.get("/favorites/details/:userId", async (req, res) => {
   const { userId } = req.params;
 
   try {
@@ -223,7 +223,7 @@ app.get("/favorites/sight/:userId", async (req, res) => {
 
 // 收藏路線
 app.get("/favorites/route/:userId", async (req, res) => {
-// app.get("/favorites/details/:userId", async (req, res) => {
+  // app.get("/favorites/details/:userId", async (req, res) => {
   const { userId } = req.params;
 
   try {
@@ -303,8 +303,8 @@ app.get("/api/like/check/:userId", async (req, res) => {
   const { userId } = req.params;
   const { routeId, attractionId } = req.query;
 
-const parsedRouteId = routeId === "null" ? null : routeId;
-const parsedAttractionId = attractionId === "null" ? null : attractionId;
+  const parsedRouteId = routeId === "null" ? null : routeId;
+  const parsedAttractionId = attractionId === "null" ? null : attractionId;
 
   if (!userId || (!parsedRouteId && !parsedAttractionId)) {
     return res.status(400).json({ error: "缺少 userId 或 routeId 或 attractionId" });
