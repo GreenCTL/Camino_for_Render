@@ -55,7 +55,7 @@ export default function Banner() {
 
   // 載入名言
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=quotes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=quotes`)
       .then((res) => res.json())
       .then((data) => {
         setAllQuotes(data);

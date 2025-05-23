@@ -26,7 +26,7 @@ function P_5_package() {
   //綠界付款 API 呼叫
   const handlePayment = async () => {
     try {
-      const response = await fetch("https://camino-for-render-backend2.onrender.com/create-payment", {
+      const response = await fetch(`${import.meta.env.VITE_STATIC_API_3002}/create-payment`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ totalAmount }),

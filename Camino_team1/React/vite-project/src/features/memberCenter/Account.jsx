@@ -13,7 +13,7 @@ const Account = ({ userId }) => {
 
   useEffect(() => {
     if (!userId) return;
-    fetch(`http://localhost:3001/users/${userId}`)
+    fetch(`${import.meta.env.VITE_STATIC_API_3001}/users/${userId}`)
       .then((res) => res.json())
       .then((data) => {
         setUser(data);
@@ -32,7 +32,7 @@ const Account = ({ userId }) => {
   if (!user) return <p>讀取中…</p>;
 
   const handleSave = () => {
-    fetch(`http://localhost:3001/users/${userId}`, {
+    fetch(`${import.meta.env.VITE_STATIC_API_3001}/users/${userId}`, {
       method: "PUT",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(form),

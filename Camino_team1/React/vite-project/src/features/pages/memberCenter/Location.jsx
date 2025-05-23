@@ -18,7 +18,7 @@ const Albergue = () => {
 
   // 抓景點的各項資料
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=sight")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`
       .then((res) => res.json())
       .then((data) => {
         // 依 sight_id 做升冪排序（1~9）

@@ -5,7 +5,7 @@ function HoverCard({ id, style }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((response) => response.json())
       .then((json) => {
         console.log("抓到資料：", json);

@@ -31,7 +31,7 @@ const SaintJeanPiedDePort = () => {
   useEffect(() => {
     const fetchDataAndDrawChart = async () => {
       try {
-        const response = await fetch('https://test-camino.onrender.com/data?table=weather');
+        const response = await fetch(`${import.meta.env.VITE_STATIC_API}/data?table=weather`);
         const rawData = await response.json();
 
         // 選取城市名稱=Saint-Jean-Pied-de-Port的資料

@@ -23,7 +23,7 @@ const Sight_des1 = () => {
 
   //抓圖片(第一張)
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=img")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=img`)
       .then((res) => res.json())
       .then((data) => {
         const ImgData_1 = data.find((item) => item.target_id === 14);
@@ -40,7 +40,7 @@ const Sight_des1 = () => {
 
   //抓圖片(第二張)
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=img")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=img`)
       .then((res) => res.json())
       .then((data) => {
         const ImgData_2 = data.find((item) => item.target_id === 14);
@@ -57,7 +57,7 @@ const Sight_des1 = () => {
 
   //抓description1
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=sight")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`
       .then((res) => res.json())
       .then((data) => {
         const description = data.find((item) => Number(item.sight_id) === 4);

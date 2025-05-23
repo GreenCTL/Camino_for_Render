@@ -22,7 +22,7 @@ const SightCard = ({
       return;
     }
 
-    fetch("https://test-camino.onrender.com/data?table=favorites", {
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=favorites`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, attractionId: sight_id }),

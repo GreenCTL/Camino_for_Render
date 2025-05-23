@@ -14,9 +14,7 @@ export default function LikeButton({ data }) {
   useEffect(() => {
     if (!userId || (!routeId && !attractionId)) return;
 
-    fetch(
-      `http://localhost:3001/api/like/check/${userId}?routeId=${routeId}&attractionId=${attractionId}`
-    )
+    fetch(`${import.meta.env.VITE_STATIC_API_3001}/api/like/check/${userId}?routeId=${routeId}&attractionId=${attractionId}`)
       .then((res) => res.json())
       .then((data) => setIsLiked(data.liked))
       .catch((err) => console.error("查詢按讚失敗2", err));

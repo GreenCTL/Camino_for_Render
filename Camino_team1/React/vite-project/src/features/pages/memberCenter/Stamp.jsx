@@ -14,7 +14,7 @@ const Stamp = () => {
   }
 
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=stamp")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=stamp`)
       .then((res) => res.json())
       .then(SetStamp);
   }, []);

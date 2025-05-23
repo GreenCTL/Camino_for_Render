@@ -27,7 +27,7 @@ function DayChoosePage() {
   const routeId = location.state?.routeId;
 
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((response) => response.json())
       .then((json) => {
         setData(json);

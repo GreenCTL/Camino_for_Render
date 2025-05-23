@@ -39,7 +39,7 @@ export default function RouteInfo(/*{ routes }*/) {
 
   useEffect(() => {
     // 第一次 fetch 資料
-    fetch("https://camino-for-render-backend1.onrender.com/sight")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`)
       .then((res) => res.json())
       .then((data) => {
         setSights(data);

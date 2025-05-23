@@ -73,8 +73,7 @@ function App() {
 
   // 載入路線
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
-      .then((res) => res.json())
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`).then((res) => res.json())
       .then((data) => {
         if (Array.isArray(data)) {
           const sorted = data.sort((a, b) => a.route_id - b.route_id);
@@ -85,20 +84,20 @@ function App() {
       })
       .catch((err) => console.error("路線讀取失敗", err));
   }, []);
-  
+
 
   return (
     <>
       {/* 導覽列 */}
       {/* 5/18改改改改改_99加上Banner&Navbar2 讓每頁都有完整導覽列 */}
       {/* <nav> */}
-        <Navbar1
-          userId={localStorage.getItem("userId")}
-          isLoggedIn={isLoggedIn}
-          setIsLoggedIn={setIsLoggedIn}
-        />
-        <Banner />
-        {location.pathname === "/" || location.pathname === "/Home" ? <Navbar2 /> : null}
+      <Navbar1
+        userId={localStorage.getItem("userId")}
+        isLoggedIn={isLoggedIn}
+        setIsLoggedIn={setIsLoggedIn}
+      />
+      <Banner />
+      {location.pathname === "/" || location.pathname === "/Home" ? <Navbar2 /> : null}
       {/* </nav> */}
 
       {/* 路由設定 */}

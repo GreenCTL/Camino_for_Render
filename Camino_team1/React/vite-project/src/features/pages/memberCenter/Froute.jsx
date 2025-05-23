@@ -40,7 +40,7 @@ const Froute = () => {
   }
   //抓圖片
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=img")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=img`)
       .then((res) => res.json())
       .then((data) => {
         const ImgData_1 = data.find((item) => item.target_id === 5);
@@ -57,7 +57,7 @@ const Froute = () => {
 
   //抓intro
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((res) => res.json())
       .then((data) => {
         const intro = data.find((item) => item.route_id === 1);
@@ -67,7 +67,7 @@ const Froute = () => {
 
   //從img資料表抓description的img
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=img")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=img`)
       .then((res) => res.json())
       .then((data) => {
         const desImg = data.find((item) => item.target_id === 2);

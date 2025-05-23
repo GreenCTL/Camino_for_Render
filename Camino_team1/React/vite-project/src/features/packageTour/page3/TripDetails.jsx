@@ -6,7 +6,7 @@ export default function TripDetails({ routeId, startDate, endDate }) {
   const [data, setData] = useState(null);
 
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((res) => res.json())
       .then((json) => setData(json))
       .catch((err) => console.error("抓資料失敗", err));

@@ -17,7 +17,7 @@ function TransferChoose({
   const route = data?.find((item) => item.route_id === parseInt(RID));
 
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((response) => response.json())
       .then((json) => setData(json))
       .catch((error) => console.error("抓資料失敗", error));

@@ -60,7 +60,7 @@ function CheckPage() {
 
   useEffect(() => {
     if (!routeId) return;
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((res) => res.json())
       .then((routes) => {
         const current = routes.find((r) => r.route_id === parseInt(routeId));

@@ -44,7 +44,7 @@ router.post("/create-payment", (req, res) => {
     TradeDesc: "旅遊套裝行程",
     ItemName: "法國之路",
     ReturnURL: "https://你的公開網址/ecpay/notify", // ✅ 綠界背景通知
-    ClientBackURL: "http://localhost:5173/page1", // ✅ 用戶完成交易返回
+    ClientBackURL: `${import.meta.env.VITE_STATIC_API_3002}/page1`, // ✅ 用戶完成交易返回
     CustomField1: "法國之路",
   };
 

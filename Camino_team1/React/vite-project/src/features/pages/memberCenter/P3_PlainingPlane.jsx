@@ -12,7 +12,7 @@ export default function PlainingPlane() {
   const [data, setData] = useState(null); //用來存放從後端抓到的資料
 
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((response) => response.json())
       .then((json) => console.log("抓到資料：", json) || setData(json))
       .catch((error) => console.error("抓資料失敗", error));

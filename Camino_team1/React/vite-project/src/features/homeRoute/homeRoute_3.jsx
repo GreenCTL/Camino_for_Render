@@ -16,7 +16,7 @@ const HomeRoute = () => {
   const [cityIntro, setCityIntro] = useState(null); //抓intro=>葡萄牙之路
   //抓葡萄牙之路的圖片
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=img")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=img`)
       .then((res) => res.json())
       .then((data) => {
         const ImgData_1 = data.find((item) => item.target_id === 7);
@@ -33,7 +33,7 @@ const HomeRoute = () => {
 
   //抓葡萄牙之路的intro
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=routes")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((res) => res.json())
       .then((data) => {
         //篩選此json檔案的route_id = 5的那筆資料(葡萄牙之路)

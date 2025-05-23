@@ -7,10 +7,10 @@ export const IntroFooter = () => {
 
     //圖片=>葡萄牙之路
     useEffect(() => {
-        fetch('https://test-camino.onrender.com/data?table=img')
+        fetch(`${import.meta.env.VITE_STATIC_API}/data?table=img`)
             .then(res => res.json())
             .then(data => {
-                
+
                 const ImgData = data.find(item => item.target_id === 3)
                 if (ImgData && ImgData.img_url) {
                     setCimg_1(ImgData.img_url);
@@ -25,7 +25,7 @@ export const IntroFooter = () => {
     }, [])
     //抓intro
     useEffect(() => {
-        fetch('https://test-camino.onrender.com/data?table=routes')
+        fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
             .then(res => res.json())
             .then((data) => {
                 //篩選此json檔案的route_id = 5的那筆資料(葡萄牙之路)
@@ -36,7 +36,7 @@ export const IntroFooter = () => {
 
     return (
         <div style={{ width: '400px' }}>
-            <h2 style={{ justifyContent:'center',display:'flex' }}>葡萄牙之路</h2>
+            <h2 style={{ justifyContent: 'center', display: 'flex' }}>葡萄牙之路</h2>
             {cimg_1 ? (
                 <img
                     src={cimg_1}
