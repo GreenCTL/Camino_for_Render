@@ -5,7 +5,11 @@ import pkg from "pg";
 import nodemailer from "nodemailer";
 import crypto from "crypto";
 import path from 'path';
+import { fileURLToPath } from 'url';
 dotenv.config();
+// 模擬 __dirname
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
 
 const { Pool } = pkg;
 const pool = new Pool({
