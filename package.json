@@ -3,8 +3,10 @@
   "version": "1.0.0",
   "description": "Camino 後端服務 - 登入註冊收藏模組",
   "main": "index.js",
+  "type": "module",
   "scripts": {
-    "start": "node index.js"
+    "start": "node index.js",
+    "build": "cd Camino_team1/React/vite-project && npm install && npm run build"
   },
   "dependencies": {
     "cors": "^2.8.5",
