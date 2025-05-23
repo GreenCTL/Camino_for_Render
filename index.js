@@ -389,8 +389,14 @@ app.get("/test", (req, res) => {
 app.use(express.static(path.join(__dirname, 'dist')));// ✅ 所有未命中的路由都回傳 index.html，讓 React Router 處理
 // ---------------------------------------------
 app.get('*', (req, res) => {
-  if (req.path.startsWith('/api') || req.path.startsWith('/data')) {
-    return res.status(404).json({ error: 'API not found' }); // 或什麼都不回
+  if (
+    req.path.startsWith('/api') ||
+    req.path.startsWith('/data') ||
+    req.path.startsWith('/users') ||
+    req.path.startsWith('/favorites') ||
+    req.path.startsWith('/verify')
+  ) {
+    return res.status(404).json({ error: 'API not found' })
   }
 
   // 這才是給 React 前端的 fallback
