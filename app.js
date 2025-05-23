@@ -100,6 +100,12 @@ app.use(function (err, req, res, next) {
   res.render("error");
 });
 
+// 測試用
+app.get("/test", (req, res) => {
+  res.send("✅ Camino backend2 is running");
+});
+
+//port
 app.listen(3002, () => {
   console.log("✅ Server running at http://localhost:3002");
 });
