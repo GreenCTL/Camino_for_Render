@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 # Camino Team 專案｜朝聖之路旅程規劃平台
 
 這是一個以「西班牙朝聖之路」為主題的旅程規劃網站，由六人團隊在資策會前端工程師養成班的大型專題中共同開發。網站提供從航班、住宿、路線到套裝行程的整合式規劃體驗，致力於打造一個結合資訊查詢與即時互動的朝聖旅遊服務平台。
@@ -93,3 +94,7 @@ npm run dev
 upload the files included fontend and backend of the camino project <br>
 how to install:
 >>>>>>> 2bba940056c2dcc581a1a2ecbfac3aa1928186dd
+=======
+# Camino_for_Render
+upload all files from project named Camino to Render
+>>>>>>> 682332f0c0845cb53cfe15204e13deb8a4fec362
