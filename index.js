@@ -386,12 +386,10 @@ app.get("/test", (req, res) => {
 
 // ---------------------------------------------
 // ✅ 設定靜態檔案（dist）目錄
-app.use(express.static(path.join(__dirname, 'dist')));
-// ✅ 所有未命中的路由都回傳 index.html，讓 React Router 處理
+app.use(express.static(path.join(__dirname, 'dist')));// ✅ 所有未命中的路由都回傳 index.html，讓 React Router 處理
 app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, 'dist', 'index.html'));
-});
-// ---------------------------------------------
+});// ---------------------------------------------
 
 
 const PORT = process.env.PORT || 3001;
