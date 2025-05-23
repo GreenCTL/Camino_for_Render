@@ -388,19 +388,8 @@ app.get("/test", (req, res) => {
 // ✅ 設定靜態檔案（dist）目錄
 app.use(express.static(path.join(__dirname, 'dist')));// ✅ 所有未命中的路由都回傳 index.html，讓 React Router 處理
 // ---------------------------------------------
-app.get('*', (req, res) => {
-  if (
-    req.path.startsWith('/api') ||
-    req.path.startsWith('/data') ||
-    req.path.startsWith('/users') ||
-    req.path.startsWith('/favorites') ||
-    req.path.startsWith('/verify')
-  ) {
-    return res.status(404).json({ error: 'API not found' })
-  }
-
-  // 這才是給 React 前端的 fallback
-  res.sendFile(path.join(__dirname, 'dist', 'index.html'));
+app.get("/*", (req, res) => {
+  res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 // ---------------------------------------------
 const PORT = process.env.PORT || 3001;
