@@ -3,7 +3,7 @@ import Sidebar from "../../memberCenter/Sidebar.jsx"; //元件
 import Account from "../../memberCenter/Account.jsx"; //元件
 import Orders from "../../memberCenter/Orders.jsx"; //元件
 import Favorites from "../../memberCenter/Favorites.jsx"; //元件
-import History from "../../memberCenter/history.jsx";
+import History from "../../memberCenter/History.jsx";
 import Records from "../../memberCenter/records.jsx";
 import Scenery from "../../memberCenter/scenery.jsx";
 //接收 userId的props
