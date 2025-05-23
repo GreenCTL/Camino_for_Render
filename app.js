@@ -23,11 +23,19 @@ const ecpayRouter = require("./routes/ecpay");
 const hotSpotsRouter = require("./routes/hotspots");
 // const likeroutesRouter = require('./routes/likeroutes'); // 如需使用可打開
 
-// 🌍 CORS
+// // 🌍 CORS
+// app.use(
+//   cors({
+//     origin: ["http://localhost:3000", "http://localhost:5173"],
+//     credentials: true,
+//   })
+// );
+
+// 測試用開放全部cors可以收到資料，如果沒問題在限定網域存取
 app.use(
   cors({
-    origin: ["http://localhost:3000", "http://localhost:5173"],
-    credentials: true,
+    origin: "*",
+    credentials: true, // ⚠️ 注意：credentials: true 搭配 "*" 在部分瀏覽器會被拒絕
   })
 );
 
