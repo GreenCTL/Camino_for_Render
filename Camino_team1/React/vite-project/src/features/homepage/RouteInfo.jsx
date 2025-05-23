@@ -39,7 +39,7 @@ export default function RouteInfo(/*{ routes }*/) {
 
   useEffect(() => {
     // 第一次 fetch 資料
-    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`)
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`))
       .then((res) => res.json())
       .then((data) => {
         setSights(data);

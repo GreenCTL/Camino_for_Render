@@ -57,7 +57,7 @@ const Sight_des1 = () => {
 
   //抓description1
   useEffect(() => {
-    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=sight`)
       .then((res) => res.json())
       .then((data) => {
         const description = data.find((item) => Number(item.sight_id) === 7);
