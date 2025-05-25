@@ -120,7 +120,7 @@ const WeatherChart = () => {
 
   return (
     <>
-    <div  style={{ width: "100%", height: "100%", boxSizing: "border-box" }}>
+    <div  style={{ width: "800px", height: "100%", boxSizing: "border-box" }}>
         {/* 加上下拉式選單顯示所有城市的天氣資料 */}
         <h2 style={{margin:'auto' ,textAlign:'center'}}>法國之路每月平均氣溫</h2>
         <canvas style={{margin:"auto"}} ref={chartRef} width={800} height={400}></canvas>
