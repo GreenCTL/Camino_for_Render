@@ -9,7 +9,7 @@ const VerifyPage = () => {
     const params = new URLSearchParams(window.location.search);
     const token = params.get("token");
 
-    fetch(`http://localhost:3001/verify?token=${token}`)
+    fetch(`${import.meta.env.VITE_STATIC_API_3001}/verify?token=${token}`)
       .then((res) => res.text())
       .then((msg) => setStatus(msg))
       .catch((err) => {

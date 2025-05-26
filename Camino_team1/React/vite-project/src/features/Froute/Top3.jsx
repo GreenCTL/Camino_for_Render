@@ -4,7 +4,7 @@ import "./Top3.css"
 export default function Top3() {
     const [routeData, setRouteData] = useState(null)
     useEffect(() => {
-        fetch("https://test-camino.onrender.com/data?table=routes")
+        fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
             .then((res) => res.json())  //  正確寫法=>用大括號{}會視作默認return，會報錯(return空值或undefined)
 
             .then((data) => {

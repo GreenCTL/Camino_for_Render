@@ -27,7 +27,7 @@ const transporter = nodemailer.createTransport({
 });
 
 const sendVerificationEmail = async (email, token) => {
-  const link = `http://localhost:5173/verify?token=${token}`;
+  const link = `https://Camino-for-Render-fontend.onrender.com/verify?token=${token}`;
   await transporter.sendMail({
     from: `"Camino App 驗證" <${process.env.GMAIL_USER}>`,
     to: email,

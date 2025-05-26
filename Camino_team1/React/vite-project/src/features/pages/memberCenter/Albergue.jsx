@@ -18,7 +18,7 @@ const Albergue = () => {
 
   // fetch 庇護所
   useEffect(() => {
-    fetch("https://test-camino.onrender.com/data?table=albergue")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=albergue`)
       .then((res) => res.json())
       .then(SetAlbergue);
   }, []);

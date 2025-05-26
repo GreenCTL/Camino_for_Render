@@ -6,16 +6,15 @@ const Scenery = () => {
 
   useEffect(() => {
     if (!userId) return;
-
-    fetch(`http://localhost:3001/favorites/sight/${userId}`)
-    // fetch(`http://localhost:3001/favorites/details/${userId}`)
+    fetch(`${import.meta.env.VITE_STATIC_API_3001}/favorites/sight/${userId}`)
+      // fetch(`http://localhost:3001/favorites/details/${userId}`)
       .then((res) => res.json())
       .then(setFavoriteSpots)
       .catch((err) => console.error("讀取景點收藏失敗", err));
   }, [userId]);
 
   const removeFavorite = async (sightId) => {
-    await fetch("http://localhost:3001/favorites", {
+    await fetch(`${import.meta.env.VITE_STATIC_API}/data?table=favorites`, {
       method: "DELETE",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, attractionId: sightId }),

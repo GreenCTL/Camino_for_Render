@@ -3,13 +3,12 @@
 }
 
 .button-more:hover {
-  background-color: rgb(189, 245, 161);
-  border: rgb(189, 245, 161);
-  color: rgb(147, 180, 151);
+  background-color: #076a6d;
+
 }
 
 .button-more {
-  background-color: #076a6d;
+  background-color: #008a8e;
   color: #fff;
   border: none;
   border-radius: 6px;

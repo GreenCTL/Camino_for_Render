@@ -17,7 +17,7 @@ const homeRoute = () => {
   const navigate = useNavigate();
   // 連接到路線規劃
   function toplan() {
-    navigate("/PlainingDate")
+    navigate("/route")
   }
   return (
     <>

@@ -11,7 +11,7 @@ function P_1_PackageTour() {
   const mockUserId = "2"; // 開發階段先用假的
 
   useEffect(() => {
-    fetch("http://localhost:3002/api/hotspots") // 替換為你的後端 API URL
+    fetch(`${import.meta.env.VITE_STATIC_API_3002}/api/hotspots`) // 替換為你的後端 API URL
       .then((res) => res.json())
       .then((data) => {
         const transformed = data.map((item) => ({
@@ -30,7 +30,7 @@ function P_1_PackageTour() {
   const [allRoutes, setallRoutes] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3002/api/hotspots/summary") // 替換為你的後端 API URL
+    fetch(`${import.meta.env.VITE_STATIC_API_3002}/api/hotspots/summary`) // 替換為你的後端 API URL
       .then((res) => res.json())
       .then((data) => {
         const Routesdata = data.map((item) => ({

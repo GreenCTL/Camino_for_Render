@@ -27,7 +27,7 @@ function DayChoosePage() {
   const routeId = location.state?.routeId;
 
   useEffect(() => {
-    fetch("http://localhost:3002/route")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((response) => response.json())
       .then((json) => {
         setData(json);

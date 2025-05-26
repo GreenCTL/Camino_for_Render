@@ -7,7 +7,7 @@ export default function PackageCard({ route }) {
 
   // 導去相關頁面
   const goToRoute = (routeId) => {
-    window.open(`/routeintro${routeId}`, "_blank");
+    window.open(`/page1`, "_blank");
   };
 
   return (

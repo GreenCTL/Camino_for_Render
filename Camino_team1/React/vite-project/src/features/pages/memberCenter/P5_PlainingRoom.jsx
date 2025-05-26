@@ -32,7 +32,7 @@ export default function PlainingRoom() {
   } = location.state || {};
 
   useEffect(() => {
-    fetch("http://localhost:3002/route")
+    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=routes`)
       .then((response) => response.json())
       .then((json) => {
         console.log("抓到資料：", json);
