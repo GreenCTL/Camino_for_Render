@@ -156,7 +156,7 @@ const Sight_des1 = () => {
         ) : (
           "圖片載入中..."
         )}
-        <p style={{ width: "80%" }}>
+        <p style={{ width: "80%" ,marginBottom:'30px'}}>
           {description1 ? description1.description : "資料載入中"}
         </p>
       </div>
@@ -193,7 +193,7 @@ const Sight_des1 = () => {
         ) : (
           "圖片載入中..."
         )}
-        <p style={{ width: "80%" }}>
+        <p style={{ width: "80%",marginBottom:'30px' }}>
           {description1 ? description1.description_2 : "資料載入中"}
         </p>
       </div>

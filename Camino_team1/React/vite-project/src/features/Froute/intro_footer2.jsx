@@ -47,6 +47,7 @@ const IntroFooter = () => {
                         objectFit: 'cover',
                         borderTopLeftRadius: '12px',
                         borderTopRightRadius: '12px'
+                        ,marginBottom:'30px'
                     }}
                 />
             ) : (
