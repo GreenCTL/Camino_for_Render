@@ -22,7 +22,7 @@ const SightCard = ({
       return;
     }
 
-    fetch(`${import.meta.env.VITE_STATIC_API}/data?table=favorites`, {
+    fetch(`${import.meta.env.VITE_STATIC_API_3001}/api/like/check/${userId}?routeId=${routeId}&attractionId=${attractionId}`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ userId, attractionId: sight_id }),
