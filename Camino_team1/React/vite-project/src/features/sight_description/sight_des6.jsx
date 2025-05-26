@@ -150,7 +150,7 @@ const Sight_des1 = () => {
               height: "400px",
               marginTop: "10px",
               marginBottom: "30px",
-              borderRadius: "30px",
+              borderRadius: "8px",
             }}
           />
         ) : (
@@ -187,7 +187,7 @@ const Sight_des1 = () => {
               height: "400px",
               marginTop: "30px",
               marginBottom: "30px",
-              borderRadius: "30px",
+              borderRadius: "8px",
             }}
           />
         ) : (
