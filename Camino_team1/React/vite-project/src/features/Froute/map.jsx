@@ -1,5 +1,6 @@
 import React, { useEffect, useRef, useState } from "react"; // import HoverCard from "./hoverCard"; // 引入 HoverCard 元件
 import { FaMapMarkerAlt } from "react-icons/fa"; //icon
+import caminoMap from '../../features/plaining/image/camino_fullMap_land_0.png'
 // import { useNavigate } from "react-router-dom";
 
 const pathsData = [
@@ -140,7 +141,7 @@ function MapRoute({ className, onCityClick, selectedCityLabel }) {
     >
       {/* 背景地圖 */}
       <img
-        src="https://media-hosting.imagekit.io/2c8916dd5f1c412e/camino_fullMap_land.png?Expires=1840515061&Key-Pair-Id=K2ZIVPTIP2VGHC&Signature=U9eE7YkHtwTK2Pnbee9fwMEQGyQiMSZq1-htkRVv5Ngl-LwrBWKkwtigSAY3BzvFVrIGiuOKpraOlaijYPdE4DusgdEt8cG6ugvMg75l3oL650tPb3QeR3NzaSm1j75AYm8tHPNFdSPmUmLmovFPXXLAIiDKUe9s0b-RCiA9U91YwDZWpNWVrnnGCpQd5zyH4eJFxcOP9wyWvsn3i7wHcaChWHy5Une1hxjeYkK5sDhGE-ht~aFvcE~4ObLw6qeGH~jdpfwszIqs9BQRlL9oAoBmMs5mvcaaN7xZmfWnjJ~l-rf4UaqRID5c18mb4zcZTMStGhkw9meuyrTwroPAiw__"
+        src={caminoMap}
         alt="mapBackground"
         style={{
           width: "100%",
