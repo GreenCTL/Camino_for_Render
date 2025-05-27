@@ -392,6 +392,10 @@ app.get("/*", (req, res) => {
   res.sendFile(path.join(__dirname, "dist", "index.html"));
 });
 // ---------------------------------------------
+
+// 設定每五分鐘喚醒一次redner解決冷啟動(掛在uptimerobot.com上)
+app.get('/ping', (req, res) => res.sendStatus(204));
+
 const PORT = process.env.PORT || 3001;
 app.listen(PORT, () => {
   console.log(`✅ Server running on port ${PORT}`);
