@@ -85,15 +85,15 @@ npm install
 ```
 
 3. **啟動本地開發伺服器**
-   <br>在src資料夾下啟動:
+<br>在src資料夾下啟動:
 ```bash
 npm run dev
 ```
-   <br>在根目錄啟動啟動:
+<br>在根目錄啟動啟動:
 ```bash
 node app.js
 ```
-   <br>在server資料夾啟動:
+<br>在server資料夾啟動:
 ```bash
 node index.js
 ```
