@@ -105,6 +105,11 @@ app.use(function (err, req, res, next) {
 //   res.send("(測試)請透過 POST 方式提交付款資料");
 // });
 
+// 
+// 設定每五分鐘喚醒一次redner解決冷啟動(掛在uptimerobot.com上)
+app.get('/ping', (req, res) => res.sendStatus(204));
+
+
 //port(增加render提供的port)
 const PORT = process.env.PORT || 3002;
 app.listen(PORT, () => {
