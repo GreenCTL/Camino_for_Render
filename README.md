@@ -90,7 +90,7 @@ npm install
 ```bash
 npm run dev
 ```
-<br>在根目錄啟動啟動:
+<br>在根目錄啟動:
 ```bash
 node app.js
 ```
