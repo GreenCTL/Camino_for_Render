@@ -84,7 +84,17 @@ cd Camino_team1/React/vite-project
 npm install
 ```
 
-3. **啟動本地開發伺服器**<br>在src資料夾下啟動:
+3. **啟動本地開發伺服器**
+4. <br>在src資料夾下啟動:
 ```bash
 npm run dev
 ```
+   <br>在根目錄啟動啟動:
+```bash
+node app.js
+```
+   <br>在server資料夾啟動:
+```bash
+node index.js
+```
+5.或是直接點擊網址:https://steplygo.onrender.com/
