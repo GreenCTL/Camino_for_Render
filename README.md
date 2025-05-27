@@ -98,4 +98,4 @@ node app.js
 ```bash
 node index.js
 ```
-5.或是直接點擊網址:https://steplygo.onrender.com/
+4. **或是直接點擊連結**:https://steplygo.onrender.com/
