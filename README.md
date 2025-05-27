@@ -84,18 +84,7 @@ cd Camino_team1/React/vite-project
 npm install
 ```
 
-3. **啟動本地開發伺服器**
-   在src資料夾下啟動:
+3. **啟動本地開發伺服器**<br>在src資料夾下啟動:
 ```bash
 npm run dev
 ```
-
-=======
-# camino_for_render
-upload the files included fontend and backend of the camino project <br>
-how to install:
->>>>>>> 2bba940056c2dcc581a1a2ecbfac3aa1928186dd
-=======
-# Camino_for_Render
-upload all files from project named Camino to Render
->>>>>>> 682332f0c0845cb53cfe15204e13deb8a4fec362
